@@ -14,11 +14,17 @@ Install Following Package
 ``
 
 ``
- npm i axios mocha chai shelljs fs faker
+ npm i axios mocha chai shelljs fs faker mochawesome
 ``
 
 How To Run
 ----------
 ``
 npm test file .\customers.test.js
+``
+
+How To Generate Report
+----------------------
+``
+npm run mochawesome file .\customers.test.js
 ``

@@ -43,7 +43,7 @@ describe("Customer API Testing", async () => {
         envVariables.token = response.token;
         fs.writeFileSync('./env.json', JSON.stringify(envVariables));
     })
-    it("Customer List", async () => {
+    it("Get Customer List", async () => {
         const response = await axios.get(`${envVariables.baseUrl}/customer/api/v1/list`,
             {
                 headers: {
@@ -66,7 +66,7 @@ describe("Customer API Testing", async () => {
         console.log(response);
         expect(response.id).equals(101)
     })
-    it("Signup User", async () => {
+    it("Create Customer", async () => {
         const response = await axios.post(`${envVariables.baseUrl}/customer/api/v1/create`,
             {
                 "id": Math.floor((Math.random() * (9999 - 1111)) + 1),

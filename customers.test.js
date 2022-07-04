@@ -66,7 +66,6 @@ describe("Customer API Testing", async () => {
         console.log(response);
         expect(response.id).equals(101)
     })
-
     it("Signup User", async () => {
         const response = await axios.post(`${envVariables.baseUrl}/customer/api/v1/create`,
             {
